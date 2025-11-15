@@ -33,3 +33,8 @@
    Promp : help me create a clean, professional README for my React assessment project? It should include installation steps, features, tech stack, demo link, and submission checklist
    Context: I needed a professional README that follows typical coding test standards and clearly explains the structure, setup, and requirements of the project.
    Part helped: Documentation (README.md).
+
+8. React Router DOM types causing Vercel build failure
+   Promp : Vercel fails to build my project with a lot of TypeScript errors like match not exported, Redirect not found, and Switch not found. I'm using react-router-dom v7 but I keep getting old v5 type definitions. How do I fix this?
+   Context: The build failed on Vercel because @types/react-router-dom and @types/react-router were installed accidentally, which are meant for React Router v5. React Router v6+ already includes types, so installing the old ones created conflicts and caused the build to fail.
+   Part helped: Deployment build fix (removing outdated type packages to resolve TypeScript conflicts).
