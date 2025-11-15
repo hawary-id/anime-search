@@ -28,3 +28,8 @@
    How do I clear the results when the query becomes empty?"
    Context: SearchPage didn’t reset results when query = "" because useEffect only fetches when length >= 2. Needed a clearResults reducer and a condition to reset on empty query.
    Part helped: Search reset behavior.
+
+7. Create README
+   Promp : help me create a clean, professional README for my React assessment project? It should include installation steps, features, tech stack, demo link, and submission checklist
+   Context: I needed a professional README that follows typical coding test standards and clearly explains the structure, setup, and requirements of the project.
+   Part helped: Documentation (README.md).

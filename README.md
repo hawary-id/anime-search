@@ -1,77 +1,180 @@
 # 🎌 Anime Search App
 
-A lightweight, responsive anime search application built with **React + TypeScript**, featuring instant search with debouncing, server-side pagination, and a modern UI powered by Shadcn UI.
-
-This project is created as part of the **YoPrint React Coding Assessment**.
+A modern, responsive anime search application built with **React + TypeScript**, featuring instant search with debouncing, server-side pagination, and a clean UI using Shadcn UI.  
+Created as part of the **YoPrint React Coding Assessment**.
 
 ---
 
 ## 🌐 Live Demo
 
-👉 **Live URL:** _<your deployed URL here>_  
-(Hosted on Netlify)
+🔗 **Live URL:** _<your deployed URL here>_  
+(Deployed on Netlify)
 
 ---
 
 ## 🛠 Tech Stack
 
-- **React 18**
-- **TypeScript**
-- **Redux Toolkit** for state management
-- **React Router DOM** (SPA routing)
-- **Vite** (build tool)
-- **Shadcn UI + TailwindCSS** (UI components)
-- **Axios** (API client)
-- **Jikan API v4** (Anime data)
+- React 18
+- TypeScript
+- Redux Toolkit
+- React Router DOM
+- Vite
+- Shadcn UI + TailwindCSS
+- Axios
+- Jikan API v4
 
 ---
 
 ## 🔎 Features
 
-### ✅ 1. Search Anime (Instant Search)
+### 🔥 Instant Search
 
-- Typing triggers a debounced request (250ms)
+- Debounced search (250ms)
+- Auto-cancel in-flight API calls
 - No need to press Enter
-- In-flight API requests are canceled automatically
-- Smooth UI transitions
+- Smooth, responsive experience
 
-### ✅ 2. Anime Detail Page
+### 🔥 Anime Detail Page
 
-- Displays detailed anime information
-- Skeleton loading states
-- Clean and responsive layout
-- Gracefully ignores axios cancel errors
+- Complete anime information
+- Skeleton loaders
+- Fully responsive layout
+- Clean and modern UI
 
-### ✅ 3. Server-Side Pagination
+### 🔥 Server-Side Pagination
 
-- Uses `pagination.last_visible_page`
-- Next/Previous page buttons
-- Automatically refetches data on page change
+- Uses Jikan’s `last_visible_page`
+- Next/Prev navigation
+- Automatically refetches data
 
-### ✅ 4. Modern UI
+### 🔥 Modern UI/UX
 
-- Glassy hero search section
+- Glass-style search hero section
 - Responsive grid layout
-- Animated skeleton loaders
-- Empty state UX
+- Empty state handling
+- Polished card design
 
-### ✅ 5. No Environment Variables
+### 🔥 Zero Environment Variables
 
-- Fully self-contained
-- Works immediately after `npm install`
+Works immediately with:
+
+```bash
+npm install
+npm run dev
+```
 
 ---
 
-## ✨ Bonus Features (Extra Effort)
+## ✨ Bonus Features
 
-- Modern, aesthetically polished UI (Shadcn + custom styling)
-- Skeleton loaders on search & detail pages
-- Cancel request handling (Axios AbortController)
-- Empty state for no results
-- Mobile-responsive layouts
-- Clean reusable components (CardAnime)
-- Error handling for network & rate-limit scenarios
+- Polished modern UI using Shadcn components
+- Skeleton loaders (search & detail)
+- Axios cancellation handling
+- Clean reusable components
+- Mobile-first design
+- Basic error handling
 
 ---
 
 ## 📁 Project Structure
+
+```
+src/
+  ├── components/
+  │     ├── ui/
+  │     ├── CardAnime.tsx
+  │     └── DetailSkeleton.tsx
+  │
+  ├── pages/
+  │     ├── search/
+  │     │     └── SearchPage.tsx
+  │     └── detail/
+  │           └── DetailPage.tsx
+  │
+  ├── store/
+  │     ├── slices/
+  │     │     ├── searchSlice.ts
+  │     │     └── detailSlice.ts
+  │     └── index.ts
+  │
+  ├── services/
+  │     └── api.ts
+  │
+  ├── hooks/
+  │     └── useDebounce.ts
+  │
+  └── main.tsx
+```
+
+---
+
+## 🚀 Installation
+
+### 1️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 2️⃣ Start development server (Port 4000)
+
+```bash
+npm run dev
+```
+
+Ensure `vite.config.ts` contains:
+
+```ts
+export default defineConfig({
+  server: {
+    port: 4000,
+  },
+});
+```
+
+---
+
+## 🌐 Deployment (Netlify)
+
+To fix SPA routing, add this file:
+
+`public/_redirects`
+
+```
+/* /index.html 200
+```
+
+---
+
+## 🤖 AI Assistance
+
+All AI prompts used during development are documented in:
+
+👉 **PROMPTS.md**
+
+Each prompt includes:
+
+- What question was asked
+- What problem it solved
+- Which part of the project it helped
+
+---
+
+## ✔ Submission Checklist
+
+- [x] Uses **npm only**
+- [x] Runs with `npm install` + `npm run dev`
+- [x] Runs on port **4000**
+- [x] No environment variables
+- [x] Deployed & accessible online
+- [x] Redux implemented
+- [x] Debounce & request cancellation implemented
+- [x] Server-side pagination implemented
+- [x] TypeScript throughout
+- [x] PROMPTS.md included
+
+---
+
+## 📄 License
+
+MIT © 2025
