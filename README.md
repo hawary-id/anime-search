@@ -7,7 +7,7 @@ Created as part of the **YoPrint React Coding Assessment**.
 
 ## 🌐 Live Demo
 
-🔗 **Live URL:** _<https://anime-search-e5a9.vercel.app/>_  
+🔗 **Live URL:** _https://anime-search-e5a9.vercel.app/_
 (Deployed on Netlify)
 
 ---
